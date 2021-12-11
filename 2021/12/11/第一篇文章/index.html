@@ -4,19 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>第一篇文章 | Hexo</title>
+  <title>搭建属于自己的博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="关于什么关于爱">
+  <meta name="description" content="搭建属于自己的博客1. 搭建环境因为GitHub提供了gitHub pages,我们可以把一些博客放置在GitHub，然后使用域名&lt;用户名&gt;.github.io来访问。所以需要一个GitHub的账号，其次最好本地安装了git。如果想把自己写的md文章渲染成HTML文件，可以使用hexo这个强大的博客管理工具，所以需要安装node.js，然后安装npm和hexo。最后还需要一个写md文章">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇文章">
+<meta property="og:title" content="搭建属于自己的博客">
 <meta property="og:url" content="http://example.com/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="关于什么关于爱">
+<meta property="og:description" content="搭建属于自己的博客1. 搭建环境因为GitHub提供了gitHub pages,我们可以把一些博客放置在GitHub，然后使用域名&lt;用户名&gt;.github.io来访问。所以需要一个GitHub的账号，其次最好本地安装了git。如果想把自己写的md文章渲染成HTML文件，可以使用hexo这个强大的博客管理工具，所以需要安装node.js，然后安装npm和hexo。最后还需要一个写md文章">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/example.jpg">
 <meta property="article:published_time" content="2021-12-11T12:32:48.000Z">
-<meta property="article:modified_time" content="2021-12-11T13:14:41.514Z">
+<meta property="article:modified_time" content="2021-12-11T14:25:47.453Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/example.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -87,7 +89,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      第一篇文章
+      搭建属于自己的博客
     </h1>
   
 
@@ -95,11 +97,44 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="关于什么"><a href="#关于什么" class="headerlink" title="关于什么"></a>关于什么</h3><h6 id="关于爱"><a href="#关于爱" class="headerlink" title="关于爱"></a>关于爱</h6>
+        <h3 id="搭建属于自己的博客"><a href="#搭建属于自己的博客" class="headerlink" title="搭建属于自己的博客"></a>搭建属于自己的博客</h3><h4 id="1-搭建环境"><a href="#1-搭建环境" class="headerlink" title="1. 搭建环境"></a>1. 搭建环境</h4><p>因为GitHub提供了gitHub pages,我们可以把一些博客放置在GitHub，然后使用域名&lt;用户名&gt;.github.io来访问。所以需要一个GitHub的账号，其次最好本地安装了git。<br>如果想把自己写的md文章渲染成HTML文件，可以使用hexo这个强大的博客管理工具，所以需要安装node.js，然后安装npm和hexo。最后还需要一个写md文章的工具，这里我是用vscode和插件Markdown Preview Enhanced。</p>
+<h4 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h4><p>可以通过以下命令安装hexo<br><code>$ npm install -g hexo-cli</code></p>
+<h4 id="3-建站"><a href="#3-建站" class="headerlink" title="3.建站"></a>3.建站</h4><p>安装完Hexo之后，执行下列命令。Hexo将会在指定目录中新建所需要的文件，指定的目录即为Hexo的工作站</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成之后，指定目录中的情况如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>其中文件<code>_config.yml</code>是网站的配置信息。文件<code>package.json</code>是应用程序的信息，以及需要安装的模块信息。<br>目录<code>scaffolds</code>是模版文件夹。新建文章时，Hexo 会根据 scaffold 中的模板文件来建立新的文件。Hexo的模板是指在新建的markdown文件中默认填充的内容。例如，如果修改scaffold/post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。也就是说，通过hexo命令每新建一个文章，都会包含指定模板文件中的内容。<br>目录<code>source</code>资源文件夹是存放用户资源的地方，如markdown文章。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。<br><code>注意：除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。</code><br>目录<code>themes</code>主题文件夹。Hexo 会根据主题来解析source目录中的markdown文件生成静态页面。</p>
+<h4 id="4-写作"><a href="#4-写作" class="headerlink" title="4.写作"></a>4.写作</h4><h5 id="4-1添加文章"><a href="#4-1添加文章" class="headerlink" title="4.1添加文章"></a>4.1添加文章</h5><p>使用命令<code>hexo new [layout] &lt;title&gt;</code>创建新的文章，其中可以在命令中指定文章的布局（layout），不指定默认为 post，也可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。创建的新文章会自动加上指定布局对应的模板文件中的内容。</p>
+<h5 id="4-2布局（Layout）"><a href="#4-2布局（Layout）" class="headerlink" title="4.2布局（Layout）"></a>4.2布局（Layout）</h5><p>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。<br>布局路径postsource/_postspagesourcedraftsource/_drafts<br><code>如果你不想你的文章被处理，你可以将 Front-Matter 中的layout: 设为 false 。</code></p>
+<h5 id="4-3模板"><a href="#4-3模板" class="headerlink" title="4.3模板"></a>4.3模板</h5><p>在新建文章时，Hexo 会根据 scaffolds 文件夹内相对应的文件来建立文件，例如：<br><code>hexo new photo &quot;My Gallery&quot;</code><br>在执行这行指令时，Hexo会尝试在在scaffolds文件中寻找 photo.md,并根据其内容建立文章，以下是您可以在模版中使用的变量：<br>变量描述layout布局title标题date文件建立日期</p>
+<h5 id="4-4Front-matter"><a href="#4-4Front-matter" class="headerlink" title="4.4Front-matter"></a>4.4Front-matter</h5><p>Front-matter是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：一般Front-matter使用的yaml语法，yaml语法需要注意空格，如title: Hello World冒号需要有一个空格，当然除YAML 外，你也可以使用 JSON 来编写 Front-matter。</p>
+</blockquote>
+<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
+<p>参数描述默认值layout布局title标题date建立日期文件建立日updated更新日期文件更新日期comments开启文章的评论功能truetags标签（不适用于分页）categories分类（不适用于分页）permalink覆盖文章网址</p>
+<h5 id="4-5分类和标签"><a href="#4-5分类和标签" class="headerlink" title="4.5分类和标签"></a>4.5分类和标签</h5><p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性而标签没有顺序和层次。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line">tags:</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法： categories:Dairy Life<br>会使分类Life成为Diary的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类.</p>
+</blockquote>
+<h5 id="4-5文章摘要"><a href="#4-5文章摘要" class="headerlink" title="4.5文章摘要"></a>4.5文章摘要</h5><p>设置文章摘要，我们只需在想显示为摘要的内容之后添加<code>&lt;!-- more--&gt;</code>即可。像下面这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hello hexo markdown</span><br><span class="line">date: 2016-11-16 18:11:25</span><br><span class="line">tags:</span><br><span class="line">- hello</span><br><span class="line">- hexo</span><br><span class="line">- markdown</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">我是短小精悍的文章摘要(๑•̀ㅂ•́) ✧</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">紧接着文章摘要的正文内容</span><br></pre></td></tr></table></figure>
+<p>这样，<code>&lt;!-- more --&gt;</code> 之前、文档配置参数之后中的内容便会被渲染为站点中的文章摘要。</p>
+<blockquote>
+<p>注意！文章摘要在文章详情页是正文中最前面的内容。</p>
+</blockquote>
+<h5 id="4-6资源引用"><a href="#4-6资源引用" class="headerlink" title="4.6资源引用"></a>4.6资源引用</h5><p>写个博客，有时候会想添加个图片或者其他形式的资源等等。有以下两种方式进行解决：</p>
+<p>1.使用绝对路径引用资源，在 Web 世界中就是资源的 URL<br>2。使用相对路径引用资源<br>对于使用相对路径引用资源的，我们可以使用 Hexo 提供的资源文件夹功能。<br>使用文本编辑器打开站点根目录下的 _ config.yml 文件，将 post_asset_folder 值设置为 true。<br><code>post_asset_folder: true</code><br>修改之后会开启 Hexo 的文章资源文件管理功能。Hexo 将会在我们每一次通过<code>hexo new &lt;title&gt;</code>命令创建新文章时自动创建一个同名文件夹，于是我们便可以将文章所引用的相关资源放到这个同名文件夹下，然后通过相对路径引用。例如，你把一个 example.jpg 图片放在了这个同名文件夹中，使用相对路径的常规 markdown 语法 <img src="./example.jpg">即可访问 。</p>
+<h4 id="5-文章发布"><a href="#5-文章发布" class="headerlink" title="5.文章发布"></a>5.文章发布</h4><p>首先执行下列命令生成相应的静态网页，生成的静态网页以及相关资源都会在public目录下<br><code>hexo generate</code></p>
+<h5 id="5-1启动Hexo服务器"><a href="#5-1启动Hexo服务器" class="headerlink" title="5.1启动Hexo服务器"></a>5.1启动Hexo服务器</h5><p><code>hexo server</code></p>
+<h5 id="5-2清楚缓存文件"><a href="#5-2清楚缓存文件" class="headerlink" title="5.2清楚缓存文件"></a>5.2清楚缓存文件</h5><p>为了避免不必要的错误，在生成静态文件前，强烈建议先运行以下命令：<br><code>hexo clean</code><br>上述命令会清除本地站点文件夹下的缓存文件（db.json）和已有的静态文件（public）。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="ckx1uby3q00013wvwc0ga77y3" data-title="第一篇文章" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="ckx1uby3q00013wvwc0ga77y3" data-title="搭建属于自己的博客" class="article-share-link">分享</a>
       
       
       
@@ -158,7 +193,7 @@
           </li>
         
           <li>
-            <a href="/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">第一篇文章</a>
+            <a href="/2021/12/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">搭建属于自己的博客</a>
           </li>
         
       </ul>
